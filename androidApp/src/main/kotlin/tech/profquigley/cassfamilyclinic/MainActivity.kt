@@ -9,6 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidBuildInfo.isDebug = BuildConfig.DEBUG
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
