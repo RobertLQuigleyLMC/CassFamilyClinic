@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 interface Platform {
     val name: String

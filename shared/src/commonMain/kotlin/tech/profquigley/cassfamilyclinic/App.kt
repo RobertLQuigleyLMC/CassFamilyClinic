@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.resources.painterResource
 
-import cassclinicapp.shared.generated.resources.Res
-import cassclinicapp.shared.generated.resources.compose_multiplatform
+import cassfamilyclinic.shared.generated.resources.Res
+import cassfamilyclinic.shared.generated.resources.compose_multiplatform
 
 @Composable
 @Preview

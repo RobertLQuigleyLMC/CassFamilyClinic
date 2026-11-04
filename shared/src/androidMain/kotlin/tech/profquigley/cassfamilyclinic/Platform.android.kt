@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 import android.os.Build
 

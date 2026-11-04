@@ -1,4 +1,4 @@
-rootProject.name = "CassClinicApp"
+rootProject.name = "CassFamilyClinic"
 
 pluginManagement {
     repositories {

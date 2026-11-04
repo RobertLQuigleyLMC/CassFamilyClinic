@@ -20,11 +20,11 @@ dependencies {
 }
 
 android {
-    namespace = "tech.profquigley.cassclinicapp"
+    namespace = "tech.profquigley.cassfamilyclinic"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "tech.profquigley.cassclinicapp"
+        applicationId = "tech.profquigley.cassfamilyclinic"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1

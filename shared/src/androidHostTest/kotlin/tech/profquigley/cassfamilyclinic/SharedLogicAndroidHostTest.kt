@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 class Greeting {
     private val platform = getPlatform()

@@ -18,7 +18,7 @@ kotlin {
         }
     }
     android {
-        namespace = "tech.profquigley.cassclinicapp.shared"
+        namespace = "tech.profquigley.cassfamilyclinic.shared"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
         compilerOptions {

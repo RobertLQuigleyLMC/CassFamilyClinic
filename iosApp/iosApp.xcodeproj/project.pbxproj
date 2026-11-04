@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		24F1E6C01A9B3F5C135755A2 /* CassClinicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CassClinicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F1E6C01A9B3F5C135755A2 /* CassFamilyClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CassFamilyClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -59,7 +59,7 @@
 		6E56193308B3CA33B28A04C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24F1E6C01A9B3F5C135755A2 /* CassClinicApp.app */,
+				24F1E6C01A9B3F5C135755A2 /* CassFamilyClinic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 24F1E6C01A9B3F5C135755A2 /* CassClinicApp.app */;
+			productReference = 24F1E6C01A9B3F5C135755A2 /* CassFamilyClinic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

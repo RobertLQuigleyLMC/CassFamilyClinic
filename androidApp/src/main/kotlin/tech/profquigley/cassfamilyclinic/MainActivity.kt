@@ -1,4 +1,4 @@
-package tech.profquigley.cassclinicapp
+package tech.profquigley.cassfamilyclinic
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
