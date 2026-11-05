@@ -7,6 +7,9 @@ internal object AppSettings {
     /** Base URL of the backend server. */
     val serverURL: String
         get() = platformServerURL ?: defaultServerURL
+
+    /** MapLibre style used for the base map (OpenFreeMap; free, no API key required). */
+    const val mapStyleURL = "https://tiles.openfreemap.org/styles/liberty"
 }
 
 /** Platform-specific override for [AppSettings.serverURL], or null to use the default. */

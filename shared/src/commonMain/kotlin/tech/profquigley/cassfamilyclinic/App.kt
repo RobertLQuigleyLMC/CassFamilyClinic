@@ -38,6 +38,8 @@ fun App() {
             PlatformBackHandler(enabled = screen != null) { current = null }
             if (screen == null) {
                 MainMenu(onSelect = { current = it })
+            } else if (screen == Screen.TrackMobileClinic) {
+                TrackClinicScreen(onBack = { current = null })
             } else if (screen == Screen.UpcomingEvents) {
                 EventsScreen(onBack = { current = null })
             } else {

@@ -43,6 +43,8 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.compose.uiTooling)
             implementation(libs.ktor.client.okhttp)
+            // MapLibre's native rendering engine; the library leaves the backend choice to the app.
+            runtimeOnly(libs.maplibre.compose.runtime.opengl.android)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
@@ -58,6 +60,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.ktor.client.core)
             implementation(libs.kotlinx.serialization.json)
+            implementation(libs.maplibre.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
