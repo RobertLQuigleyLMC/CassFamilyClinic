@@ -1,17 +1,12 @@
 package tech.profquigley.cassfamilyclinic
 
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -73,23 +68,21 @@ fun TrackClinicScreen(onBack: () -> Unit) {
             delay(refreshInterval)
         }
     }
-    Column(
-        modifier = Modifier
-            .safeContentPadding()
-            .fillMaxSize()
-            .padding(horizontal = 24.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-    ) {
-        TextButton(onClick = onBack) { Text("< Back") }
-        Text(Screen.TrackMobileClinic.title, style = MaterialTheme.typography.headlineSmall)
+    ScreenScaffold(title = Screen.TrackMobileClinic.title, onBack = onBack) {
         when (val s = state) {
             TrackState.Loading -> Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
-            is TrackState.Failed -> Text("Couldn't load the clinic's location: ${s.message}")
+            is TrackState.Failed -> Text(
+                "Couldn't load the clinic's location: ${s.message}",
+                style = MaterialTheme.typography.bodyLarge,
+            )
             is TrackState.Loaded ->
                 if (s.trail.points.isEmpty()) {
-                    Text("The mobile clinic hasn't reported its location recently.")
+                    Text(
+                        "The mobile clinic hasn't reported its location recently.",
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
                 } else {
                     TrailMap(
                         trail = s.trail,
@@ -97,7 +90,8 @@ fun TrackClinicScreen(onBack: () -> Unit) {
                             .fillMaxWidth()
                             .weight(1f)
                             .padding(bottom = 16.dp)
-                            .clip(RoundedCornerShape(8.dp)),
+                            .clip(MaterialTheme.shapes.small)
+                            .border(1.dp, MaterialTheme.colorScheme.outline, MaterialTheme.shapes.small),
                     )
                 }
         }
@@ -118,7 +112,7 @@ private fun TrailMap(trail: LocationTrail, modifier: Modifier = Modifier) {
             LineLayer(
                 id = "clinic-trail",
                 source = line,
-                color = const(Color(0xFF1565C0)),
+                color = const(CassColors.Blue),
                 width = const(4.dp),
                 cap = const(LineCap.Round),
                 join = const(LineJoin.Round),
@@ -130,7 +124,7 @@ private fun TrailMap(trail: LocationTrail, modifier: Modifier = Modifier) {
             CircleLayer(
                 id = "clinic-latest",
                 source = latest,
-                color = const(Color(0xFFD32F2F)),
+                color = const(CassColors.Navy),
                 radius = const(9.dp),
                 strokeColor = const(Color.White),
                 strokeWidth = const(3.dp),
